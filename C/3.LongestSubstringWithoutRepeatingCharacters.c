@@ -1,5 +1,5 @@
 // my stupid original solution with violence
-int lengthOfLongestSubstring(char* s) {
+int lengthOfLongestSubstring_original(char* s) {
     int n=strlen(s);
     if(!n) return 0;
     char target[n+1];
