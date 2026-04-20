@@ -20,15 +20,15 @@ class Solution(object):
         result = []
         
         def backtrack(index, path):
-            if index == len(digits):
-                result.append(path)
-                return
+            if index == len(digits):#when one path is complete by selecting combinations of letters
+                result.append(path) #add the path to the result list
+                return              #and return to previous layer of the recursion tree
             
             possible_letters = dictionary[digits[index]]
             for letter in possible_letters:
                 path.append(letter)
-                backtrack(index + 1, path)
+                backtrack(index + 1, path)#every time the program goes back here, the next path will use another letter
                 path.pop()
         
-        backtrack(0, [])
+        backtrack(0, [])#begining of the recursion tree
         return result
