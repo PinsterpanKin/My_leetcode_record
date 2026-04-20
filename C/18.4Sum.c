@@ -1,3 +1,4 @@
+//Runtime: 82.81%  Memory: 88.31%
 #include <stdlib.h>
 int compare(const void* a, const void* b){
     return (*(int*)a-*(int*)b);
