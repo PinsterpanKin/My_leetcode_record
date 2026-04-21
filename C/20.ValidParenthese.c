@@ -69,3 +69,42 @@ bool isValid(char* s) {
     if(the_stack->topone!=NULL) return false;
     return true;
 }
+
+bool isValid(char* s) {
+    int n = strlen(s);
+    if (n % 2 != 0) return false; 
+
+    
+    char* stack = (char*)malloc(sizeof(char) * (n + 1));
+    int top = -1;
+
+    for (int i = 0; i < n; i++) {
+        char current = s[i];
+
+        
+        if (current == '(' || current == '[' || current == '{') {
+            stack[++top] = current;
+        } 
+     
+        else {
+            
+            if (top == -1) {
+                free(stack);
+                return false;
+            }
+
+            char topChar = stack[top--];
+        
+            if ((current == ')' && topChar != '(') ||
+                (current == ']' && topChar != '[') ||
+                (current == '}' && topChar != '{')) {
+                free(stack);
+                return false;
+            }
+        }
+    }
+
+    bool result = (top == -1);
+    free(stack);
+    return result;
+}
