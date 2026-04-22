@@ -1,3 +1,7 @@
+/* In my first solution, I carefully implemented a real stack data structure, which is a bit overkill for this problem. 
+In the second solution, I used a simple array to simulate the stack, which is more efficient and easier to implement. 
+Both solutions check for the validity of the parentheses by ensuring that every opening bracket has a corresponding closing bracket in the correct order.
+*/
 #include<stdlib.h>
 #include<string.h>
 #include<stdbool.h>
@@ -70,15 +74,19 @@ bool isValid(char* s) {
     return true;
 }
 
+/* =========Make it more efficient==========*/
+
+
 bool isValid(char* s) {
     int n = strlen(s);
     if (n % 2 != 0) return false; 
 
-    
-    char* stack = (char*)malloc(sizeof(char) * (n + 1));
+    //minimize the space
+    char stack[n / 2]; 
     int top = -1;
 
     for (int i = 0; i < n; i++) {
+        if(top>=n/2) return false;
         char current = s[i];
 
         
@@ -89,7 +97,6 @@ bool isValid(char* s) {
         else {
             
             if (top == -1) {
-                free(stack);
                 return false;
             }
 
@@ -98,13 +105,11 @@ bool isValid(char* s) {
             if ((current == ')' && topChar != '(') ||
                 (current == ']' && topChar != '[') ||
                 (current == '}' && topChar != '{')) {
-                free(stack);
                 return false;
             }
         }
     }
 
-    bool result = (top == -1);
-    free(stack);
-    return result;
+
+    return (top == -1);
 }
