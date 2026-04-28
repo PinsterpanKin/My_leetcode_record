@@ -4,6 +4,7 @@ class Solution(object):
         m = len(nums1)
         n = len(nums2)
         if m > n:
+            #OOP--self, swap the input to make sure nums1 is the shorter one
             return self.findMedianSortedArrays(nums2, nums1)
         
         left = 0
@@ -37,7 +38,7 @@ class Solution(object):
                     minright = nums1[i]
                 else:
                     minright = min(nums1[i], nums2[j])
-                
+                #return type: float
                 return (maxleft + minright) / 2.0
                 
         return 0.0
