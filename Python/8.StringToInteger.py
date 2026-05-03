@@ -1,4 +1,4 @@
-#to be improved...
+#Beat 100% in time and 91% in space
 class Solution(object):
     def myAtoi(self, s):
         n=len(s)
