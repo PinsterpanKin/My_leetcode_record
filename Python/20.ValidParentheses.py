@@ -1,4 +1,3 @@
-# Still not effective enough...
 class Solution(object):
     def isValid(self, s):
         """
