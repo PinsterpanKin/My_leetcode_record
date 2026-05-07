@@ -1,3 +1,9 @@
+"""
+The original solution is a clear description of the conversion process, 
+but it is a bit too long. 
+We can use a more concise way to achieve the same result.
+"""
+
 class Solution(object):
     def intToRoman(self, num):
         result=""
@@ -39,3 +45,24 @@ class Solution(object):
         if num>=5:
             num-=5
             result+="V"
+        if num>=4:
+            num-=4
+            result+="I"
+            result+="V"
+        while num>=1:
+            num-=1
+            result+="I"
+        return result
+
+"""A more concise way to achieve the same result."""
+
+class Solution(object):
+    def intToRoman(self, num):
+        values=[1000,900,500,400,100,90,50,40,10,9,5,4,1]
+        symbols=["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"]
+        result=""
+        for i in range(len(values)):
+            while num>=values[i]:
+                num-=values[i]
+                result+=symbols[i]
+        return result
