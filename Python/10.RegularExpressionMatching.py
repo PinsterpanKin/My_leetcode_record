@@ -1,4 +1,9 @@
-#Personally believed that further study on this algorithm is required
+"""
+Explanation:
+We can use dynamic programming to solve this problem. 
+We create a 2D boolean array `dp` where `dp[i][j]` indicates whether the first `i` characters of the string `s` match the first `j` characters of the pattern `p`.
+This solution is still not efficient enough for Python...
+"""
 class Solution(object):
     def isMatch(self, s, p):
         n=len(s)
