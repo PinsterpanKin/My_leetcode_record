@@ -8,7 +8,7 @@ class Solution(object):
     def isMatch(self, s, p):
         n=len(s)
         m=len(p)
-        dp=[[False for _ in range(m+1)] for _ in range(n+1)]
+        dp=[[False for _ in range(m+1)] for _ in range(n+1)] #+1 for the empty string and empty pattern
         dp[0][0]=True
         for i in range(2,m+1):
             if p[i-1]=="*":
