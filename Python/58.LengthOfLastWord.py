@@ -1,3 +1,4 @@
+#The original solution is highly efficient when implemented in C, but there is another pythonic way which slaughters the runtime
 class Original_Solution:
     def lengthOfLastWord(self, s: str) -> int:
         current = len(s) - 1
