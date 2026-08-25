@@ -9,7 +9,7 @@ class Original_Solution:
             length += 1
             current -= 1
         return length
-
+#Less runtime, but actually more memory usage
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
         return len(s.strip().split(' ')[-1])
