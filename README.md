@@ -4,8 +4,10 @@ A collection of LeetCode algorithm solutions, primarily implemented in **python*
 
 ## 📂 Repository Structure
 
+- **`/Python`**: High-level implementations focusing on readability and built-in library usage. Prioritized language for algorithm implementation.
+- **`/Java`**: Mainly used for NUS CS2040S practices (I hate the choice of Java by NUS SoC, I think they should choose .py or .cpp)
 - **`/C`**: Core algorithmic solutions implemented in C. Focuses on manual memory management and pointer logic.
-- **`/Python`**: High-level implementations focusing on readability and built-in library usage.
+- **`/Cpp`**: Popular among Chinese Engineers' community, also my personal preference for self-challenging.
 - **`/SQL`**: Database query exercises and optimizations.
 
 ## 🛠 Training Stack
@@ -91,10 +93,3 @@ These problems are intentionally selected because they cover the most common alg
 | 226 | Invert Binary Tree | Tree / DFS | Other |
 
 This quick table is meant for fast review: scan the problem number, identify the category, and jump directly into the relevant pattern for practice.
-
-## 📝 Coding Philosophy
-
-- **Efficiency**: Prioritizing $O(n)$ or $O(\log n)$ solutions whenever possible.
-- **Robustness**: Handling edge cases (e.g., empty heads in linked lists, single-element arrays).
-- **Pythonic & Efficiency**: Actively applying syntactic sugar in python.
-- **Clean Code**: Using descriptive variable names and maintaining consistent indentation for C pointers.
