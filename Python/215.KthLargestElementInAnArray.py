@@ -8,7 +8,7 @@ class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
         target = len(nums) - k
         left, right = 0, len(nums) - 1
-        while left < right:
+        while left <= right:
             pivot = random.randint(left, right)
             nums[pivot], nums[right] = nums[right], nums[pivot]
             i = left
@@ -23,3 +23,15 @@ class Solution:
                 right = i - 1
             else:
                 return nums[i]
+
+# Most stable solution, but not the fastest. I think to address all possible cases, this is currently the best.
+class HeapSolution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        min_heap = nums[:k]
+        heapq.heapify(min_heap)
+        
+        for num in nums[k:]:
+            if num > min_heap[0]:
+                heapq.heappushpop(min_heap, num)
+                
+        return min_heap[0]
