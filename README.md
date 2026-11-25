@@ -2,7 +2,7 @@
 
 A collection of LeetCode algorithm solutions, primarily implemented in **python**. This repository serves as a personal laboratory for practicing data structures and algorithm efficiency.
 
-## 📂 Repository Structure
+## Repository Structure
 
 - **`/Python`**: High-level implementations focusing on readability and built-in library usage. Prioritized language for algorithm implementation.
 - **`/Java`**: Mainly used for NUS CS2040S practices (I hate the choice of Java by NUS SoC, I think they should choose .py or .cpp)
@@ -10,13 +10,13 @@ A collection of LeetCode algorithm solutions, primarily implemented in **python*
 - **`/Cpp`**: Popular among Chinese Engineers' community, also my personal preference for self-challenging.
 - **`/SQL`**: Database query exercises and optimizations.
 
-## 🛠 Training Stack
+## Training Stack
 
 - **Primary Language**: Python
 - **Environment**: Linux-based development
 - **Version Control**: Git
 
-## 🧠 Classic Problem List
+## Classic Problem List
 
 This repository follows a classic interview-oriented progression, centered on the well-known Blind 75 problem set and a few additional highly frequent coding challenges.
 
